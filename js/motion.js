@@ -60,7 +60,7 @@
             trigger: ".sloganWrapper",
             start: "0 0",
             end:  "bottom 100",
-            scrub:2,
+            scrub:true,
             pin:true,
             markers: true,
         }
@@ -81,7 +81,7 @@
           trigger: ".sloganWrapper",
           start: "top top",
           end: "bottom top",
-          scrub: true,
+          scrub: 1,
         }
       });
       
