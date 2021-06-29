@@ -49,8 +49,6 @@ $mobile: 600px;
     }
     @include mobile(){
         grid-template-columns: repeat(4 , 1fr);
-        gap: 2rem;
-        padding: 0 2rem;
     }
 }
 .fullScr{

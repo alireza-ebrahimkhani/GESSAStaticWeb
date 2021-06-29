@@ -70,8 +70,6 @@ body.home {
   .row {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 0 2rem;
   }
 }
 
@@ -197,8 +195,6 @@ body.home {
   .row {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 0 2rem;
   }
 }
 
@@ -572,7 +568,7 @@ a:hover {
   position: fixed;
   width: 100%;
   display: inline-block;
-  background-color: #b8b8b8;
+  background-color: white;
   z-index: 100;
 }
 
@@ -612,6 +608,23 @@ a:hover {
   display: grid;
   -ms-grid-columns: auto 107px;
       grid-template-columns: auto 107px;
+}
+
+@media only screen and (max-width: 900px) {
+  .header_drawerItems {
+    padding: 20rem 3rem 3rem 33rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header_drawerItems {
+    padding: 3rem;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    row-gap: 12rem;
+  }
 }
 
 .header_menu {
@@ -655,6 +668,21 @@ a:hover {
   margin-top: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .header_contact ul, .header_contact .header_mail {
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+}
+
+.header_contact .header_social {
+  text-align: right;
+}
+
+.header_contact .header_mail {
+  font-weight: 200;
+}
+
 .header_drawer--open a {
   margin-left: 0rem;
   opacity: 1;
@@ -677,6 +705,13 @@ a:hover {
   top: 6rem;
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
+}
+
+@media only screen and (max-width: 900px) {
+  .header_logo {
+    left: 3rem;
+    top: 3rem;
+  }
 }
 
 .header_logo svg {
@@ -739,6 +774,20 @@ a:hover {
   grid-column: 4;
 }
 
+@media only screen and (max-width: 900px) {
+  .header_hamIco {
+    top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header_hamIco {
+    right: 3rem;
+    top: 3rem;
+    left: unset;
+  }
+}
+
 .header_line {
   height: 2px;
   position: absolute;
@@ -782,6 +831,224 @@ a:hover {
   top: 0;
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
+}
+
+.footerWrapper {
+  padding: 0 6rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footerWrapper {
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footerWrapper {
+    padding: 0 3rem;
+  }
+}
+
+.footer_content {
+  padding: 6rem 0;
+  border-top: 1px solid black;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer_content {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer_content {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_content {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer_logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.footer_logoSvg {
+  width: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+.footer_copyRight {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Lab Grotesque";
+  font-size: 1.25rem;
+  font-weight: 100;
+  position: relative;
+}
+
+.footer_copyRight p {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_copyRight p {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_copyRight {
+    -ms-flex-item-align: right;
+        -ms-grid-row-align: right;
+        align-self: right;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+}
+
+.footer_fAddress {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-column: 4/9;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-family: "Lab Grotesque";
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.footer_fAddress span {
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_fAddress {
+    margin-top: 1rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+}
+
+.footer_oAddress {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-column: 4/9;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  font-family: "Lab Grotesque";
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.footer_oAddress span {
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_oAddress {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+
+.footer_email {
+  font-size: 2rem;
+  font-weight: 200;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.footer_email a {
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_email {
+    margin-top: 3rem;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1/5;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+}
+
+.footer_socials {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  font-size: 2rem;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_socials {
+    -ms-grid-column-align: left;
+        justify-self: left;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+}
+
+.content {
+  min-height: calc(100vh - 200px);
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
 }
 
 .videoWrapper {
@@ -830,6 +1097,7 @@ a:hover {
 
 .aboutWrapper {
   position: relative;
+  height: 100vh;
   overflow: visible;
 }
 

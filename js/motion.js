@@ -47,7 +47,7 @@
     gsap.utils.toArray('.dark').forEach(dark => {
         ScrollTrigger.create({
             trigger: dark,
-            start: 'top top',
+            start: 'top 1px',
             end: 'bottom top',
             toggleClass:  { targets: '.header', className: 'white' },
             //markers: true,
@@ -62,15 +62,15 @@
             end:  "bottom 100",
             scrub:true,
             pin:true,
-            markers: true,
+            //markers: true,
         }
     }); 
     gsap.to(".sloganWrapper span", {
         duration:1,
-        x:document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
         scrollTrigger: {
             trigger: ".sloganWrapper",
-            start: "top top",
+            start: "top 20%",
             end:  "bottom 100",
             scrub:2,
             //markers: true,
@@ -95,8 +95,8 @@
         duration:1,
         ease: "ease", 
         scrollTrigger: {
-            trigger: ".turnBlack",
-            start: "top 10%",
+            trigger: ".sloganWrapper",
+            start: "top 20%",
             end:  "bottom 100",
             scrub:1,
             toggleClass:  { targets: 'body', className: 'black' },
