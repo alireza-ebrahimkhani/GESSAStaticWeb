@@ -1,0 +1,928 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 8px;
+}
+
+body.home {
+  background-color: #B8B8B8;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7a7a7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #747474;
+}
+
+.rowWrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.row {
+  padding: 0 6rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .row {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .row {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+    gap: 3rem;
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+.fullScr {
+  padding: 0;
+}
+
+.boxed {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.extended {
+  padding: 0 23rem 0 6rem;
+}
+
+.col12 {
+  grid-column: span 12;
+}
+
+.col11 {
+  grid-column: span 11;
+}
+
+.col10 {
+  grid-column: span 10;
+}
+
+.col9 {
+  grid-column: span 9;
+}
+
+.col8 {
+  grid-column: span 8;
+}
+
+.col7 {
+  grid-column: span 7;
+}
+
+.col6 {
+  grid-column: span 6;
+}
+
+.col5 {
+  grid-column: span 5;
+}
+
+.col5 {
+  grid-column: span 4;
+}
+
+.col5 {
+  grid-column: span 3;
+}
+
+.col2 {
+  grid-column: span 2;
+}
+
+.col1 {
+  grid-column: span 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .col11, .col10, .col9, .col8, .col7 {
+    grid-column: span 8;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col11, .col10, .col9, .col8, .col7 {
+    grid-column: span 4;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .col6, .col5 {
+    grid-column: span 4;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col6, .col5 {
+    grid-column: span 4;
+  }
+}
+
+.rowWrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.row {
+  padding: 0 6rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .row {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .row {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+    gap: 3rem;
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+.fullScr {
+  padding: 0;
+}
+
+.boxed {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.extended {
+  padding: 0 23rem 0 6rem;
+}
+
+.col12 {
+  grid-column: span 12;
+}
+
+.col11 {
+  grid-column: span 11;
+}
+
+.col10 {
+  grid-column: span 10;
+}
+
+.col9 {
+  grid-column: span 9;
+}
+
+.col8 {
+  grid-column: span 8;
+}
+
+.col7 {
+  grid-column: span 7;
+}
+
+.col6 {
+  grid-column: span 6;
+}
+
+.col5 {
+  grid-column: span 5;
+}
+
+.col5 {
+  grid-column: span 4;
+}
+
+.col5 {
+  grid-column: span 3;
+}
+
+.col2 {
+  grid-column: span 2;
+}
+
+.col1 {
+  grid-column: span 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .col11, .col10, .col9, .col8, .col7 {
+    grid-column: span 8;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col11, .col10, .col9, .col8, .col7 {
+    grid-column: span 4;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .col6, .col5 {
+    grid-column: span 4;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .col6, .col5 {
+    grid-column: span 4;
+  }
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-Light.eot");
+  src: local("Lab Grotesque Light"), local("../asset/general/fonts/labGrotesque/LabGrotesque-Light"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Light.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Light.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic.eot");
+  src: local("Lab Grotesque Light Italic"), local("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic"), url("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-LightItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-Medium.eot");
+  src: local("Lab Grotesque Medium"), local("../asset/general/fonts/labGrotesque/LabGrotesque-Medium"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Medium.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Medium.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Medium.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic.eot");
+  src: local("Lab Grotesque Medium Italic"), local("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic"), url("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-MediumItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-Bold.eot");
+  src: local("Lab Grotesque Bold"), local("../asset/general/fonts/labGrotesque/LabGrotesque-Bold"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Bold.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Bold.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Bold.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic.eot");
+  src: local("Lab Grotesque Bold Italic"), local("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic"), url("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic.woff2") format("woff2"), url("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic.woff") format("woff"), url("../asset/general/fonts/labGrotesque/LabGrotesque-BoldItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/*VAZIR FONT*/
+@font-face {
+  font-family: 'Vazir';
+  src: url("../asset/general/fonts/vazir/Vazir-Light.eot");
+  src: local("Lab Grotesque Light"), local("../asset/general/fonts/vazir/Vazir-Light"), url("../asset/general/fonts/vazir/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/vazir/Vazir-Light.woff2") format("woff2"), url("../asset/general/fonts/vazir/Vazir-Light.woff") format("woff"), url("../asset/general/fonts/vazir/Vazir-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url("../asset/general/fonts/vazir/Vazir-Medium.eot");
+  src: local("Lab Grotesque Medium "), local("../asset/general/fonts/vazir/Vazir-Medium"), url("../asset/general/fonts/vazir/Vazir-Medium.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/vazir/Vazir-Medium.woff2") format("woff2"), url("../asset/general/fonts/vazir/Vazir-Medium.woff") format("woff"), url("../asset/general/fonts/vazir/Vazir-Medium.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url("../asset/general/fonts/vazir/Vazir-Bold.eot");
+  src: local("Lab Grotesque Bold "), local("../asset/general/fonts/vazir/Vazir-Bold"), url("../asset/general/fonts/vazir/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../asset/general/fonts/vazir/Vazir-Bold.woff2") format("woff2"), url("../asset/general/fonts/vazir/Vazir-Bold.woff") format("woff"), url("../asset/general/fonts/vazir/Vazir-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.aboutWrapper_faPrag p {
+  font-family: "Vazir";
+  text-align: right;
+  direction: rtl;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Lab Grotesque";
+}
+
+h1, .h1 {
+  font-weight: 100;
+  font-size: 12rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h1, .h1 {
+    font-weight: 400;
+    font-size: 6.5rem;
+    color: black;
+  }
+}
+
+h2, .h2 {
+  font-weight: 100;
+  font-size: 7.5rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h2, .h2 {
+    font-weight: 300;
+    font-size: 5rem;
+    color: black;
+  }
+}
+
+h3, .h3 {
+  font-weight: 200;
+  font-size: 5.25rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h3, .h3 {
+    font-weight: 400;
+    font-size: 4.5rem;
+    color: black;
+  }
+}
+
+h4, .h4 {
+  font-weight: 200;
+  font-size: 4rem;
+  color: black;
+  padding: 3rem 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h4, .h4 {
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: black;
+  }
+}
+
+h5, .h5 {
+  font-weight: 200;
+  font-size: 2.75rem;
+  color: black;
+}
+
+h6, .h6 {
+  font-weight: 100;
+  font-size: 2.25rem;
+  color: black;
+  padding-top: 1rem;
+}
+
+.subtitlei {
+  font-weight: 200;
+  font-size: 2rem;
+  color: black;
+  font-family: "Lab Grotesque";
+}
+
+.subtitleii {
+  font-weight: 100;
+  font-size: 1.75rem;
+  color: black;
+  font-family: "Lab Grotesque";
+}
+
+.bodyi {
+  font-weight: 100;
+  font-size: 2rem;
+  color: black;
+  font-family: "Lab Grotesque";
+  line-height: 23px;
+}
+
+.bodyii {
+  font-weight: 100;
+  font-size: 1.75rem;
+  color: black;
+  font-family: "Lab Grotesque";
+}
+
+.button {
+  font-weight: 100;
+  font-size: 2rem;
+  color: black;
+  font-family: "Lab Grotesque";
+  text-transform: uppercase;
+}
+
+.caption {
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 1rem;
+  font-family: "Lab Grotesque";
+}
+
+.overline {
+  font-weight: 100;
+  font-size: 1.25rem;
+  color: black;
+  font-family: "Lab Grotesque";
+  letter-spacing: 1.5px;
+}
+
+a {
+  font-weight: 100;
+  font-size: 2rem;
+  color: black;
+  font-family: "Lab Grotesque";
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+a:hover {
+  color: #3d3d3d;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+/*
+.h1--fa{
+    @include type(300, 12rem);
+    @extend %faType;
+}
+.h2--fa{
+    @include type(300, 7.5rem);
+    @extend %faType;
+}
+.h3--fa{
+    @include type(400, 5.25rem);
+    @extend %faType;
+}
+.h4--fa{
+    @include type(300, 4rem);
+    @extend %faType;
+}
+.h5--fa{
+    @include type(400, 2.75rem);
+    @extend %faType;
+}
+.h6--fa{
+    @include type(400, 2rem);
+    @extend %faType;
+}
+.subtitlei--fa{
+    @include type(400, 2rem);
+    @extend %faType;
+}
+.subtitleii--fa{
+    @include type(300, 1.75rem);
+    @extend %faType;
+}
+.bodyi--fa{
+    @include type(300, 2rem);
+    @extend %faType;
+}
+.bodyii--fa{
+    @include type(300, 1.75rem);
+    @extend %faType;
+    line-height: 21px;
+}
+.button--fa{
+    @include type(400, 2rem);
+    @extend %faType;
+    line-height: 19px;
+}
+.caption--fa{
+    @include type(400, 1.5rem);
+    @extend %faType;
+    margin-top: .5rem;
+}
+.overline--fa{
+    @include type(300, 1.25rem);
+    @extend %faType;
+}
+*/
+.header {
+  position: fixed;
+  width: 100%;
+  display: inline-block;
+  background-color: #b8b8b8;
+  z-index: 100;
+}
+
+.header_wrapper {
+  width: 100%;
+  position: relative;
+  max-width: 1440px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header_drawer {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_drawer--open {
+  max-height: 100vh;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_drawer--open a {
+  opacity: 1;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_drawerItems {
+  width: 100%;
+  padding: 20rem 6rem 6rem 33rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 107px;
+      grid-template-columns: auto 107px;
+}
+
+.header_menu {
+  display: inline-block;
+  bottom: 6rem;
+  left: 33rem;
+}
+
+.header_menu a {
+  opacity: 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  margin-left: -3rem;
+  cursor: pointer;
+}
+
+.header_menu li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.header_contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  bottom: 6rem;
+  right: 6rem;
+}
+
+.header_contact a {
+  margin-left: -3rem;
+  opacity: 0;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  font-size: 2rem;
+}
+
+.header_contact li {
+  margin-top: 1rem;
+}
+
+.header_drawer--open a {
+  margin-left: 0rem;
+  opacity: 1;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_socials {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.header_logo {
+  height: 106px;
+  width: 168px;
+  display: inline-block;
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo svg {
+  position: absolute;
+  height: 28px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo--open {
+  top: 23.5rem;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo_g {
+  top: 0;
+  left: 0px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo_e {
+  top: 0;
+  left: 43px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo_ssa {
+  top: 0;
+  left: 76px;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_logo_g--open {
+  bottom: unset;
+  left: 0px;
+}
+
+.header_logo_e--open {
+  top: 39px;
+  left: 5px;
+}
+
+.header_logo_ssa--open {
+  top: 79px;
+  left: 4px;
+}
+
+.header_hamIco {
+  position: fixed;
+  width: 4rem;
+  height: 3.5rem;
+  top: 6rem;
+  left: 33rem;
+  cursor: pointer;
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+.header_line {
+  height: 2px;
+  position: absolute;
+  top: 13px;
+  width: 4rem;
+  background-color: black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_line::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 4rem;
+  top: -12px;
+  background-color: black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_line::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 4rem;
+  top: 12px;
+  background-color: black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_line--open::before {
+  top: 0;
+  background-color: black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.header_line--open::after {
+  top: 0;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.videoWrapper {
+  height: 100vh;
+  position: relative;
+}
+
+.videoWrapper_slogans {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.videoWrapper_dynamic {
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.videoWrapper span, .videoWrapper p {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  font-family: 'Lab Grotesque';
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.videoWrapper span {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.videoWrapper video {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.aboutWrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.aboutWrapper_enPrag {
+  font-size: 7.8vw;
+  font-family: "Lab Grotesque";
+  font-weight: 300;
+  color: white;
+  margin-top: 6rem;
+}
+
+@media only screen and (min-width: 1440px) {
+  .aboutWrapper_enPrag {
+    font-size: 14rem;
+  }
+}
+
+.aboutWrapper_faPrag {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.aboutWrapper_faPrag p {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50vw;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 100;
+  color: black;
+  margin-top: 6rem;
+}
+
+.white {
+  background-color: black;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.white svg {
+  fill: white;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.white .header_line, .white .header_line:before, .white .header_line:after {
+  background-color: white;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.white a {
+  color: white;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.black {
+  background-color: black !important;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+.sloganWrapper {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sloganWrapper span {
+  position: absolute;
+  top: 50%;
+  left: 100vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Lab Grotesque";
+  font-size: 400px;
+  color: white;
+  white-space: nowrap;
+}
+
+.sloganImg {
+  position: absolute;
+  top: 50%;
+  left: 100vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.turnBlack {
+  position: static;
+}
+/*# sourceMappingURL=style.css.map */

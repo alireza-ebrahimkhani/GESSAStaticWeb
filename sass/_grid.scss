@@ -1,0 +1,144 @@
+$desktopx: 1440px;
+$desktop:1200px;
+$tablet: 900px;
+$mobile: 600px;
+
+@mixin tablet(){
+    @media only screen and (max-width:$tablet){
+        @content;
+    }
+}
+@mixin mobile(){
+    @media only screen and (max-width:$mobile){
+        @content;
+    }
+}
+@mixin desktop(){
+    @media only screen and (max-width:$desktop){
+        @content;
+    }
+}
+@mixin desktopx(){
+    @media only screen and (min-width:$desktopx){
+        @content;
+    }
+}
+@mixin grid(){
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 3rem;
+}
+.rowWrapper{
+    width:100%;
+    overflow-x:hidden ;
+    //margin-bottom:6rem;
+}
+.row{
+    padding: 0 6rem;
+    @include grid();
+    @include desktop(){
+        grid-template-columns: repeat(12 , 1fr);
+        gap: 3rem;
+        padding: 0 6rem;
+    }
+    @include tablet(){
+        grid-template-columns: repeat(8 , 1fr);
+        gap: 3rem;
+        padding: 0 3rem;
+    }
+    @include mobile(){
+        grid-template-columns: repeat(4 , 1fr);
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+}
+.fullScr{
+    padding: 0;
+}
+.boxed{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.extended{
+    padding: 0 23rem 0 6rem;
+}
+$col:(
+    "12" : span 12,
+    "11" : span 11,
+    "10" : span 10,
+    "9" : span 9,
+    "8" : span 8,
+    "7" : span 7,
+    "6" : span 6,
+    "5" : span 5,
+    "4" : span 4,
+    "3" : span 3,
+    "2" : span 2,
+    "1" : span 1,
+);
+@function column($span){
+    @return map-get($col, $span);
+}
+
+.col12{ 
+    grid-column: column("12");
+}
+.col11{ 
+    grid-column: column("11");
+    @extend %sameLarge;
+}
+.col10{ 
+    grid-column: column("10");
+    @extend %sameLarge;
+}
+.col9{ 
+    grid-column: column("9");
+    @extend %sameLarge;
+}
+.col8{ 
+    grid-column: column("8");
+    @extend %sameLarge;
+}
+.col7{ 
+    grid-column: column("7");
+    @extend %sameLarge;
+}
+.col6{
+    grid-column: column("6");
+    @extend %sameMedium;
+    
+}
+.col5{
+    grid-column: column("5");
+    @extend %sameMedium;
+}
+.col5{
+    grid-column: column("4");
+}
+.col5{
+    grid-column: column("3");
+    @extend %sameMedium;
+}
+.col2{
+    grid-column: column("2");
+}
+.col1{
+    grid-column: column("1");
+}
+%sameLarge{
+    @include tablet(){
+        grid-column: column("8");
+    }
+    @include mobile(){
+        grid-column: column("4");
+    }
+}
+%sameMedium{
+    @include tablet(){
+        grid-column: column("4");
+    }
+    @include mobile(){
+        grid-column: column("4");
+    }
+}

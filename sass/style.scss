@@ -1,0 +1,283 @@
+@import 'general';
+@import 'grid';
+@import 'color';
+@import 'typography';
+.header{
+    position: fixed;
+    width: 100%;
+    display: inline-block;
+    background-color:$pColor;
+    z-index: 100;
+    &_wrapper{
+        width: 100%;
+        position: relative;
+        max-width: 1440px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &_drawer{
+        width:100%;
+        overflow:hidden ;
+        max-height: 0px;
+        transition: $motion;
+    }
+    &_drawer--open{
+        max-height: 100vh;
+        transition: $motion;
+        & a{
+            opacity: 1;
+            transition: $motion;
+        }
+    }
+    &_drawerItems{
+        width:100%;
+        padding: 20rem 6rem 6rem 33rem;
+        display: grid;
+        grid-template-columns: auto 107px;
+    }
+    
+    &_menu{
+        display: inline-block;
+        bottom:6rem;
+        left:33rem;
+        & a{
+            opacity: 0;
+            font-size: 3rem;
+            text-transform: capitalize;
+            transition: 1s all ease;
+            margin-left: -3rem;
+            cursor: pointer;
+        }
+        & li:not(:last-child){
+            margin-bottom:1rem;
+        }
+    }
+    &_contact{
+        display: grid;
+        grid-template-rows: auto auto;
+        bottom:6rem;
+        right:6rem;
+        & a{
+            margin-left: -3rem;
+            opacity: 0;
+            transition: 1s all ease;
+            font-size: 2rem;
+        }
+        & li{
+            margin-top:1rem;
+        }
+    }
+    &_drawer--open{
+        & a{
+            margin-left: 0rem;
+            opacity: 1;
+            transition: 1s all ease;
+        }
+    }
+    &_socials{
+        align-self: end;
+    }
+    &_logo{
+        height: 106px;
+        width: 168px;
+        display: inline-block;
+        position: absolute;
+        left:6rem;
+        top:6rem;
+        transition: $motion;
+        & svg{
+            position: absolute;
+            height: 28px;
+            transition: $motion;
+        }
+
+        &--open{
+            top:23.5rem;
+            //bottom:6rem;
+            transition: $motion;     
+        }
+        &_g{
+            top:0;
+            left:0px;
+            transition: $motion;
+        }
+        &_e{
+            top:0;
+            left:43px;
+            transition: $motion;
+        }
+        &_ssa{
+            top:0;
+            left:76px;
+            transition: $motion;
+        }
+        &_g--open{
+            bottom:unset;
+            left:0px;
+        }
+        &_e--open{
+           top:39px;
+           left:5px;
+        }
+        &_ssa--open{
+            top:79px;
+            left:4px;
+        }
+    }
+    &_hamIco{
+        position: fixed;
+        width: 4rem;
+        height: 3.5rem;
+        top:6rem;
+        left: 33rem;
+        cursor: pointer;
+        grid-column: 4;
+    }
+    &_line{
+        height: 2px;
+        position: absolute;
+        top:13px;
+        width: 4rem;
+        background-color: black;
+        transition: $motion;
+    }
+    &_line::before{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 4rem;
+        top: -12px;
+        background-color: black;
+        transition: $motion;
+    }
+    &_line::after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 4rem;
+        top: 12px;
+        background-color: black;
+        transition: $motion;
+    }
+    &_line--open::before{
+        top: 0;
+        background-color: black;
+        transition: $motion;
+    }
+    &_line--open::after{
+        top: 0;
+        transition: $motion;
+    }
+
+}
+.videoWrapper{
+    height: 100vh;
+    position: relative;
+    
+    &_slogans{
+        display: inline-block;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+        z-index: 3;
+    }
+    &_dynamic{
+        height: 4rem;
+        margin-bottom: 1rem;
+    }
+    & span, & p{
+        text-align: center;
+        font-size: 4rem;
+        color: white;
+        font-family: 'Lab Grotesque';
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+    & span{
+        position:absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    & video{
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(.8);
+    }
+}
+.aboutWrapper{
+    position: relative;
+    //height: 120vh;
+    overflow: visible;
+    &_enPrag{
+        font-size: 7.8vw;
+        font-family: $enFont;
+        font-weight: 300;
+        color: white;
+        margin-top: 6rem;
+        @include desktopx(){
+            font-size: 14rem;
+        }
+    }
+    &_faPrag{
+        position: absolute;
+        top:0;
+        width: 100%;
+    }
+    &_faPrag p{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50vw;
+        font-size: 4rem;
+        @extend %faType;
+        text-align: center;
+        font-weight: 100;
+        color: black;
+        margin-top: 6rem;
+    }
+}
+.white {
+    background-color: black;
+    transition: $motion;
+    & svg{
+        fill:white;
+        transition: $motion;
+        }
+    & .header_line, & .header_line:before, & .header_line:after{
+        background-color: white;
+        transition: $motion;
+    }
+    & a{
+        color: white;
+        transition: $motion;
+    }
+}
+.black{
+    background-color: black !important;
+    transition: $LongMotion;
+}
+.sloganWrapper{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    & span{
+        position: absolute;
+        top: 50%;
+        left:100vw;
+        transform: translateY(-50%);
+        font-family: $enFont;
+        font-size: 400px;
+        color: white;
+        white-space: nowrap;
+    }
+}
+.sloganImg{
+    position: absolute;
+    top:50%;
+    left:100vw;
+    transform: translateY(-50%);
+}
+.turnBlack{
+position: static;
+}

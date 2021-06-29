@@ -1,0 +1,35 @@
+@import 'color';
+* , *:before , *:after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+$LongMotion: 2s all ease;
+$motion: 1s all ease;
+html{
+    font-size: 8px;
+}
+body.home{
+  background-color: #B8B8B8;
+  transition: $LongMotion;
+}
+::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background : rgba(255, 255, 255, 0);
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb {
+    background: $h1;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken($h1, 20%); 
+}
