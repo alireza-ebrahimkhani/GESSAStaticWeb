@@ -1133,6 +1133,12 @@ a:hover {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 600px) {
+  .videoWrapper span, .videoWrapper p {
+    font-size: 3rem;
+  }
+}
+
 .videoWrapper span {
   position: absolute;
   left: 50%;

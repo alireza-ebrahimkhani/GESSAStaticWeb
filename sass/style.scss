@@ -372,6 +372,9 @@
         font-family: 'Lab Grotesque';
         font-weight: 100;
         text-transform: uppercase;
+        @include mobile(){
+            font-size: 3rem;;
+        }
     }
     & span{
         position:absolute;
