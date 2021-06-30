@@ -3,14 +3,14 @@
 @import 'color';
 @import 'typography';
 .header{
-    position: fixed;
     width: 100%;
     display: inline-block;
     background-color:white;
+    position: fixed;
     z-index: 100;
     &_wrapper{
-        width: 100%;
         position: relative;
+        width: 100%;
         max-width: 1440px;
         left: 50%;
         transform: translateX(-50%);
@@ -321,9 +321,33 @@
         }
     }
 }
+/****title*****/
+.pageTitle{
+    position: relative;
+    &_svg{
+        width: 437.3px;
+        position: absolute;
+        right: 0rem;
+        padding: 6rem 6rem 0 0;
+        @include tablet(){
+            width: 250px;
+            padding: 3rem 3rem 0 0;
+        }
+    }
+    
+    @include mobile(){
+        display: none;
+    }
+}
+/****main*****/
 .content{
     min-height: calc(100vh - 200px);
     grid-template-rows: auto auto;
+    padding-bottom: 6rem;
+    &_margin{
+        padding-top: 184px;
+        
+    }
 }
 .videoWrapper{
     height: 100vh;
@@ -364,12 +388,19 @@
     position: relative;
     height: 100vh;
     overflow: visible;
+    
+    @include tablet(){
+        height: 80vh;
+    }
     &_enPrag{
         font-size: 7.8vw;
         font-family: $enFont;
         font-weight: 300;
         color: white;
         margin-top: 6rem;
+        @include tablet(){
+            font-size: 10vw;
+        }
         @include desktopx(){
             font-size: 14rem;
         }
@@ -383,13 +414,20 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: 50vw;
+        width: 50%;
         font-size: 4rem;
         @extend %faType;
         text-align: center;
         font-weight: 100;
         color: black;
         margin-top: 6rem;
+        @include tablet(){
+            font-size: 2.5rem;
+        }
+        @include mobile(){
+            width: 100%;
+            text-align: right;
+        }
     }
 }
 .white {
@@ -435,4 +473,125 @@
 }
 .turnBlack{
 position: static;
+}
+/****archive*****/
+.postsList>.row{
+    row-gap:12rem;
+    @include mobile(){
+        row-gap:6rem;
+    }
+}
+.post_imgWrapper{
+    overflow: hidden;
+    position: relative;
+}
+.post_img{
+    position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+}
+.post_info{
+    align-self:end ;
+} 
+.posts:nth-child(4n+1){
+    & .post_imgWrapper{
+        padding-top:75% ;
+        grid-column: 1/7;
+        @include tablet(){
+            grid-column: 1/6;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+        }
+    }
+    & .post_info{
+        grid-column: 7/13;
+        grid-row: 1;
+        @include tablet(){
+            grid-column: 6/9;
+            justify-self: right;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+            grid-row: 2;
+            justify-self: left;
+        }
+    }  
+    }
+.posts:nth-child(4n+2){
+    & .post_imgWrapper{
+        padding-top:134% ;
+        grid-column: 8/13;
+        @include tablet(){
+            grid-column: 3/9;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+        }
+    }
+    & .post_info{
+        grid-column: 1/8;
+        grid-row: 1;
+        justify-self: right;
+        @include tablet(){
+            grid-column: 1/3;
+            justify-self: left;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+            grid-row: 2;
+        }
+    }
+}
+.posts:nth-child(4n+3){
+    & .post_imgWrapper{
+        padding-top:75% ;
+        grid-column: 2/10;
+        @include tablet(){
+            grid-column: 1/6;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+        }
+    }
+    & .post_info{
+        grid-column: 10/13;
+        grid-row: 1;
+        @include tablet(){
+            grid-column: 6/9;
+            justify-self: right;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+            grid-row: 2;
+            justify-self: left;
+        }
+    } 
+}
+.posts:nth-child(4n+4){
+    & .post_imgWrapper{
+        padding-top:134% ;
+        grid-column: 8/12;
+        @include tablet(){
+            grid-column: 3/9;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+        }
+    }
+    & .post_info{
+        grid-column: 1/8;
+        grid-row: 1;
+        justify-self: right;
+        @include tablet(){
+            grid-column: 1/3;
+            justify-self: left;
+        }
+        @include mobile(){
+            grid-column: 1/5;
+            grid-row: 2;
+            justify-self: left;
+        }
+    }
 }

@@ -60,6 +60,12 @@ $mobile: 600px;
 }
 .extended{
     padding: 0 23rem 0 6rem;
+    @include tablet(){
+        padding: 0 12.5rem 0 3rem;
+    }
+    @include mobile(){
+        padding: 0 3rem 0 3rem;
+    }
 }
 $col:(
     "12" : span 12,

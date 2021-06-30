@@ -11,6 +11,9 @@ $motion: 1s all ease;
 html{
     font-size: 8px;
 }
+.imgwrapper > img{
+  width: 100%;
+}
 body.home{
   background-color: #B8B8B8;
   transition: $LongMotion;

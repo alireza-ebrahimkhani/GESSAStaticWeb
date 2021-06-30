@@ -5,18 +5,7 @@
     animation.from(".videoWrapperSpan", {opacity:0, stagger:2.5})
             .to(".videoWrapperSpan", {opacity:0, stagger:2.5}, 2)
 
-    gsap.from(".aboutWrapper_enPrag", {
-        //duration:100,
-        y:'100vh',
-        ease: "ease", 
-        scrollTrigger: {
-            trigger: ".aboutWrapper",
-            start: "top 80%",
-            end:  "80% 80%",
-            scrub:true,
-            //markers: true,
-        }
-    });
+   
 
     gsap.from(".aboutWrapper_faPrag", {
         //duration:10,
@@ -36,9 +25,9 @@
         opacity:0,
         ease: "ease", 
         scrollTrigger: {
-            trigger: ".aboutWrapper",
-            start: "10% 50%",
-            end:  "40% 50%",
+            trigger: ".videoWrapper",
+            start: "20% top",
+            end:  "70% 30%",
             scrub:true,
             //markers: true,
         }
