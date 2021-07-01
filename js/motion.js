@@ -39,7 +39,32 @@
             start: 'top 1px',
             end: 'bottom top',
             toggleClass:  { targets: '.header', className: 'white' },
-            //markers: true,
+            markers: true,
+        });
+    });
+
+    gsap.utils.toArray('.darkii').forEach(dark => {
+        ScrollTrigger.create({
+            trigger: dark,
+            start: 'top 1px',
+            end: '200% top',
+            toggleClass:  { targets: '.header', className: 'white' },
+            markers: true,
+        });
+    });
+
+    gsap.utils.toArray('.imgWrapper img').forEach(imgWrapperImg => {
+        gsap.to(imgWrapperImg, {
+            duration:10,
+            scale:1.2,
+            ease: "ease", 
+            scrollTrigger: {
+                trigger: imgWrapperImg,
+                start: "-30% 10%",
+                end:  "bottom 10%",
+                scrub:true,
+                markers: true,
+            }
         });
     });
       
@@ -48,19 +73,21 @@
         scrollTrigger: {
             trigger: ".sloganWrapper",
             start: "0 0",
-            end:  "bottom 100",
+            end:  "200% 100",
             scrub:true,
             pin:true,
             //markers: true,
         }
     }); 
+    
+
     gsap.to(".sloganWrapper span", {
         duration:1,
         x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
         scrollTrigger: {
             trigger: ".sloganWrapper",
             start: "top 20%",
-            end:  "bottom 100",
+            end:  "200% 100",
             scrub:2,
             //markers: true,
         }
@@ -86,10 +113,10 @@
         scrollTrigger: {
             trigger: ".sloganWrapper",
             start: "top 20%",
-            end:  "bottom 100",
+            end:  "200% 100",
             scrub:1,
             toggleClass:  { targets: 'body', className: 'black' },
             //markers: true,
         }
     });  
-    
+   

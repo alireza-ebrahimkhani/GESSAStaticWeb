@@ -490,6 +490,8 @@ position: static;
 }
 .post_img{
     position: absolute;
+
+    width: 100%;
         left: 50%;
         top: 50%;
         transform: translate(-50% , -50%);
@@ -527,7 +529,7 @@ position: static;
         padding-top:134% ;
         grid-column: 8/13;
         @include tablet(){
-            grid-column: 3/9;
+            grid-column: 4/9;
         }
         @include mobile(){
             grid-column: 1/5;
@@ -538,7 +540,7 @@ position: static;
         grid-row: 1;
         justify-self: right;
         @include tablet(){
-            grid-column: 1/3;
+            grid-column: 1/4;
             justify-self: left;
         }
         @include mobile(){
@@ -575,7 +577,7 @@ position: static;
 .posts:nth-child(4n+4){
     & .post_imgWrapper{
         padding-top:134% ;
-        grid-column: 8/12;
+        grid-column: 6/12;
         @include tablet(){
             grid-column: 3/9;
         }
@@ -584,7 +586,7 @@ position: static;
         }
     }
     & .post_info{
-        grid-column: 1/8;
+        grid-column: 1/6;
         grid-row: 1;
         justify-self: right;
         @include tablet(){
