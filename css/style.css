@@ -1155,6 +1155,12 @@ a:hover {
   padding-top: 184px;
 }
 
+@media only screen and (max-width: 900px) {
+  .content_margin {
+    padding-top: 12rem;
+  }
+}
+
 .videoWrapper {
   height: 100vh;
   position: relative;
@@ -1577,7 +1583,7 @@ a:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1/7;
-    height: unset;
+    height: calc(100vh - 12rem);
   }
 }
 
@@ -1593,6 +1599,7 @@ a:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1/13;
+    margin-bottom: 10rem;
   }
 }
 
@@ -1609,6 +1616,13 @@ a:hover {
   z-index: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .wwaWrapperPragEn {
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+}
+
 .wwaWrapperPragFa {
   position: absolute;
   font-family: "Vazir";
@@ -1618,6 +1632,13 @@ a:hover {
   direction: rtl;
   color: white;
   top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .wwaWrapperPragFa {
+    font-size: 2rem;
+    line-height: 5rem;
+  }
 }
 
 .wg {
@@ -1657,7 +1678,7 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .wg_titleWrapper h1 {
-    font-size: 12rem;
+    font-size: 10rem;
   }
 }
 
@@ -1665,6 +1686,13 @@ a:hover {
   -webkit-clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
   width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .wg_imgWrapper img {
+    font-size: 12rem;
+    width: 250px;
+  }
 }
 
 .wg_info h5, .wg_info p {
