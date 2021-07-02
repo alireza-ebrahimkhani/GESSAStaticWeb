@@ -37,6 +37,57 @@ body.home {
   background: #747474;
 }
 
+button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  height: 6rem;
+  width: 240px;
+  margin: 0;
+  text-align: left;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Lab Grotesque';
+  font-weight: 100;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+button:after {
+  content: '';
+  height: 1px;
+  width: 5rem;
+  right: 2rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  position: absolute;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+button:hover {
+  background-color: #1a1a1a;
+  padding: 1rem 3rem;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+button:hover:after {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
 .rowWrapper {
   width: 100%;
   overflow-x: hidden;
@@ -384,7 +435,7 @@ body.home {
   font-style: normal;
 }
 
-.aboutWrapper_faPrag p {
+.wg_info h5, .wg_info p {
   font-family: "Vazir";
   text-align: right;
   direction: rtl;
@@ -1190,19 +1241,18 @@ a:hover {
   position: absolute;
   top: 0;
   width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .aboutWrapper_faPrag p {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   width: 50%;
   font-size: 4rem;
   text-align: center;
   font-weight: 100;
   color: black;
-  margin-top: 6rem;
+  margin: 6rem auto;
+  font-family: "Vazir";
 }
 
 @media only screen and (max-width: 900px) {
@@ -1248,30 +1298,35 @@ a:hover {
   transition: 2s all ease;
 }
 
+.sloganImgWrapper {
+  width: 4000px;
+  height: 600px;
+  overflow-x: visible;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sloganImgWrapper img {
+  margin-right: 200px;
+  position: absolute;
+}
+
 .sloganWrapper {
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 .sloganWrapper span {
   position: absolute;
   top: 50%;
-  left: 100vw;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-family: "Lab Grotesque";
   font-size: 400px;
   color: white;
   white-space: nowrap;
-}
-
-.sloganImg {
-  position: absolute;
-  top: 50%;
-  left: 100vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .turnBlack {
@@ -1289,18 +1344,8 @@ a:hover {
   }
 }
 
-.post_imgWrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-.post_img {
-  position: absolute;
+.imgWrapper img {
   width: 100%;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .post_info {
@@ -1310,7 +1355,6 @@ a:hover {
 }
 
 .posts:nth-child(4n+1) .post_imgWrapper {
-  padding-top: 75%;
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-column: 1/7;
@@ -1363,7 +1407,6 @@ a:hover {
 }
 
 .posts:nth-child(4n+2) .post_imgWrapper {
-  padding-top: 134%;
   -ms-grid-column: 8;
   -ms-grid-column-span: 5;
   grid-column: 8/13;
@@ -1416,7 +1459,6 @@ a:hover {
 }
 
 .posts:nth-child(4n+3) .post_imgWrapper {
-  padding-top: 75%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
   grid-column: 2/10;
@@ -1469,7 +1511,6 @@ a:hover {
 }
 
 .posts:nth-child(4n+4) .post_imgWrapper {
-  padding-top: 134%;
   -ms-grid-column: 6;
   -ms-grid-column-span: 6;
   grid-column: 6/12;
@@ -1521,5 +1562,118 @@ a:hover {
     -ms-grid-column-align: left;
         justify-self: left;
   }
+}
+
+.wwaWrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: calc(100vh - 432px);
+}
+
+@media only screen and (max-width: 900px) {
+  .wwaWrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+    height: unset;
+  }
+}
+
+.wwaWrapperColumn {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .wwaWrapperColumn {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+}
+
+.wwaWrapperPrag {
+  position: relative;
+}
+
+.wwaWrapperPragEn {
+  position: relative;
+  font-size: 4rem;
+  line-height: 8rem;
+  font-family: "Lab Grotesque";
+  font-weight: 100;
+  z-index: 1;
+}
+
+.wwaWrapperPragFa {
+  position: absolute;
+  font-family: "Vazir";
+  font-weight: 100;
+  font-size: 3.25rem;
+  line-height: 8rem;
+  direction: rtl;
+  color: white;
+  top: 0;
+}
+
+.wg {
+  height: 100vh;
+  overflow-x: visible;
+  position: relative;
+}
+
+.wg_list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -webkit-column-gap: 12rem;
+          column-gap: 12rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.wg_titleWrapper {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wg_titleWrapper h1 {
+  font-size: 19rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .wg_titleWrapper h1 {
+    font-size: 12rem;
+  }
+}
+
+.wg_imgWrapper img {
+  -webkit-clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+  width: 500px;
+}
+
+.wg_info h5, .wg_info p {
+  margin-top: 2rem;
+  color: white;
+}
+
+.wg_infoPrag {
+  font-size: 2rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */

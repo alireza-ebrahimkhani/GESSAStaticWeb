@@ -39,7 +39,7 @@
             start: 'top 1px',
             end: 'bottom top',
             toggleClass:  { targets: '.header', className: 'white' },
-            markers: true,
+            //markers: true,
         });
     });
 
@@ -49,10 +49,10 @@
             start: 'top 1px',
             end: '200% top',
             toggleClass:  { targets: '.header', className: 'white' },
-            markers: true,
+            //markers: true,
         });
     });
-
+    /*
     gsap.utils.toArray('.imgWrapper img').forEach(imgWrapperImg => {
         gsap.to(imgWrapperImg, {
             duration:10,
@@ -66,7 +66,7 @@
                 markers: true,
             }
         });
-    });
+    });*/
       
     gsap.to(".sloganWrapper", {
         duration:1, 
@@ -83,15 +83,53 @@
 
     gsap.to(".sloganWrapper span", {
         duration:1,
-        x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        //x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        right:'6rem',
         scrollTrigger: {
             trigger: ".sloganWrapper",
-            start: "top 20%",
+            start: "top top",
             end:  "200% 100",
             scrub:2,
             //markers: true,
         }
     }); 
+    gsap.to(".sloganImgWrapper", {
+        duration:1,
+        //x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        right:'0rem',
+        scrollTrigger: {
+            trigger: ".sloganWrapper",
+            start: "top top",
+            end:  "200% 100",
+            scrub:2,
+            //markers: true,
+        }
+    }); 
+    gsap.from(".sloganWrapper", {
+        duration:1,
+        //x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        opacity:0,
+        scrollTrigger: {
+            trigger: ".sloganWrapper",
+            start: "-10% top",
+            end:  "20% 20%",
+            scrub:true,
+            markers: true,
+        }
+    });
+    gsap.to(".sloganImgWrapper", {
+        duration:1,
+        //x: document.querySelector('.sloganWrapper span').clientWidth * -1 ,
+        right:'0rem',
+        scrollTrigger: {
+            trigger: ".sloganWrapper",
+            start: "top top",
+            end:  "200% 100",
+            scrub:2,
+            //markers: true,
+        }
+    }); 
+    /*
     const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".sloganWrapper",
@@ -105,7 +143,7 @@
         const left = layer.dataset.left;
         tl.to(layer, {x: left, ease: "ease"}, 0)
       });
-
+*/
 
     gsap.to("body", {
         duration:1,

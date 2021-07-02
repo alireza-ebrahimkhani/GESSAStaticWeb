@@ -410,20 +410,19 @@
     }
     &_faPrag{
         position: absolute;
-        top:0;
+        top: 0;
         width: 100%;
+        text-align: center;
+        margin: 0 auto;
     }
     &_faPrag p{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         width: 50%;
         font-size: 4rem;
-        @extend %faType;
         text-align: center;
         font-weight: 100;
         color: black;
-        margin-top: 6rem;
+        margin: 6rem auto;
+    font-family: $faFont;
         @include tablet(){
             font-size: 2.5rem;
         }
@@ -453,14 +452,27 @@
     background-color: black !important;
     transition: $LongMotion;
 }
+.sloganImgWrapper{
+    
+    width: 4000px;
+    height: 600px;
+    overflow-x: visible;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    & img{
+        margin-right: 200px;
+        position: absolute;
+    }
+}
 .sloganWrapper{
     height: 100vh;
     position: relative;
-    overflow: hidden;
     & span{
         position: absolute;
         top: 50%;
-        left:100vw;
+        //margin-left: 12rem;
+        //left:100vw;
         transform: translateY(-50%);
         font-family: $enFont;
         font-size: 400px;
@@ -468,12 +480,7 @@
         white-space: nowrap;
     }
 }
-.sloganImg{
-    position: absolute;
-    top:50%;
-    left:100vw;
-    transform: translateY(-50%);
-}
+
 .turnBlack{
 position: static;
 }
@@ -484,24 +491,16 @@ position: static;
         row-gap:6rem;
     }
 }
-.post_imgWrapper{
-    overflow: hidden;
-    position: relative;
-}
-.post_img{
-    position: absolute;
 
+.imgWrapper img{
     width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50% , -50%);
 }
+
 .post_info{
     align-self:end ;
 } 
 .posts:nth-child(4n+1){
     & .post_imgWrapper{
-        padding-top:75% ;
         grid-column: 1/7;
         @include tablet(){
             grid-column: 1/6;
@@ -526,7 +525,6 @@ position: static;
     }
 .posts:nth-child(4n+2){
     & .post_imgWrapper{
-        padding-top:134% ;
         grid-column: 8/13;
         @include tablet(){
             grid-column: 4/9;
@@ -551,7 +549,6 @@ position: static;
 }
 .posts:nth-child(4n+3){
     & .post_imgWrapper{
-        padding-top:75% ;
         grid-column: 2/10;
         @include tablet(){
             grid-column: 1/6;
@@ -576,7 +573,6 @@ position: static;
 }
 .posts:nth-child(4n+4){
     & .post_imgWrapper{
-        padding-top:134% ;
         grid-column: 6/12;
         @include tablet(){
             grid-column: 3/9;
@@ -599,4 +595,86 @@ position: static;
             justify-self: left;
         }
     }
+}
+
+.wwaWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: calc(100vh - 432px);
+    @include tablet(){
+        grid-column: 1/7;
+        height: unset;
+    }
+    &Column{
+        align-self: end;
+        margin-bottom: 4rem;
+        @include tablet(){
+            grid-column: 1/13;
+        }
+    }
+    &Prag{
+        position: relative;
+    }
+    &PragEn{
+        position: relative;
+        font-size: 4rem;
+        line-height: 8rem;
+        font-family:$enFont;
+        font-weight: 100;
+        z-index: 1;
+    }
+    &PragFa{
+        position: absolute;
+        font-family:$faFont;
+        font-weight: 100;
+        font-size: 3.25rem;
+        line-height: 8rem;
+        direction: rtl;
+        color: white;
+        top: 0;
+
+    }
+}
+.wg{
+    height: 100vh;
+    overflow-x: visible;
+    position: relative;
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: 12rem;
+        position: absolute;
+        top: 50%;
+        transform:translateX(100%);
+        transform: translateY(-50%);
+        
+        
+    }
+    &_titleWrapper {
+        align-self: center;
+    }
+    &_titleWrapper h1{
+        font-size: 19rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+        text-align: left;
+        @include mobile(){
+            font-size: 12rem;
+        }
+    }
+    &_imgWrapper img{
+        clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+        width:500px;
+    }
+    &_info h5, &_info p{
+        @extend %faType;
+        margin-top: 2rem;
+        color: white;
+    }
+    &_infoPrag{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    
 }

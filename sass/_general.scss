@@ -1,4 +1,5 @@
 @import 'color';
+
 * , *:before , *:after{
     margin:0;
     padding:0;
@@ -6,6 +7,7 @@
     text-decoration: none;
     list-style: none;
 }
+$shortMotion: .5s all ease;
 $LongMotion: 2s all ease;
 $motion: 1s all ease;
 html{
@@ -36,3 +38,47 @@ body.home{
   ::-webkit-scrollbar-thumb:hover {
     background: darken($h1, 20%); 
 }
+
+button{
+    position: relative;
+    display: inline-block;
+    border: none;
+    height: 6rem;
+    width: 240px;
+    margin: 0;
+    text-align: left;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Lab Grotesque';
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: $shortMotion;
+    &:after{
+      content: '';
+      height: 1px;
+      width: 5rem;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: white;
+      position: absolute;
+      transition: $shortMotion;
+    }
+    &:hover{
+      background-color: lighten(black , 10%);
+      padding: 1rem 3rem;
+      transition: $shortMotion;
+    }
+    &:hover:after{
+      transform: rotate(10deg);
+      transition: $shortMotion;
+    }
+}
+
+
