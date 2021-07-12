@@ -1,3 +1,4 @@
+/*
 gsap.to(".wwaWrapperPragFa", {
     //duration:10,
     y:30,
@@ -10,7 +11,7 @@ gsap.to(".wwaWrapperPragFa", {
         //markers: true,
     }
 });
-
+*/
 gsap.to("body", {
     duration:1,
     ease: "ease", 
@@ -33,17 +34,19 @@ gsap.utils.toArray('.dark').forEach(dark => {
     });
 });
 
+let movement = document.querySelector(".wg_list").clientWidth - window.innerWidth;
 gsap.to(".wg_list", {
     //duration:10,
-    //x: document.querySelector(".wg_list").clientWidth * -1,
-    right:'6rem',
+    x:() => `+=${-1*(window.innerWidth + movement + 48 )}`,
     ease: "ease", 
     scrollTrigger: {
         trigger: ".wg",
         start: "top top",
-        end:  "bottom 20%",
+        //end:  "bottom 20%",
         scrub:2,
-        //markers: true,
+        markers: true,
         pin:true,
+        pinspacing:false,
+        invalidateOnRefresh: true,
     }
 });

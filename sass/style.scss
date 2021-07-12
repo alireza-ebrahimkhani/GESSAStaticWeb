@@ -455,7 +455,7 @@
     transition: $LongMotion;
 }
 .sloganImgWrapper{
-    
+    left:100vw;
     width: 4000px;
     height: 600px;
     overflow-x: visible;
@@ -474,7 +474,7 @@
         position: absolute;
         top: 50%;
         //margin-left: 12rem;
-        //left:100vw;
+        left:100vw;
         transform: translateY(-50%);
         font-family: $enFont;
         font-size: 400px;
@@ -482,10 +482,35 @@
         white-space: nowrap;
     }
 }
-
 .turnBlack{
 position: static;
 }
+.fProject{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 400px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(../asset/img/10.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_info{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+    & h2, & h4,& h6{
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    & button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 /****archive*****/
 .postsList>.row{
     row-gap:12rem;
@@ -607,6 +632,10 @@ position: static;
         grid-column: 1/7;
         height: calc(100vh - 12rem);
     }
+    @include mobile(){
+        margin-top: 6rem;
+        height: unset;
+    }
     &Column{
         align-self: end;
         margin-bottom: 4rem;
@@ -626,8 +655,8 @@ position: static;
         font-weight: 100;
         z-index: 1;
         @include mobile(){
-            font-size:  2rem;
-            line-height: 5rem;
+            font-size:  2.5rem;
+            line-height: 5.5rem;
         }
     }
     &PragFa{
@@ -639,9 +668,12 @@ position: static;
         direction: rtl;
         color: white;
         top: 0;
+        text-align: left;
+        margin-top: 4rem;
         @include mobile(){
+            margin-top: 2.75rem;
             font-size: 2rem;
-            line-height: 5rem;
+            line-height: 5.5rem;
         }
 
     }
@@ -658,18 +690,23 @@ position: static;
         top: 50%;
         transform:translateX(100%);
         transform: translateY(-50%);
-        
-        
     }
     &_titleWrapper {
-        align-self: center;
+        width: 100vw;
+        position: relative;
+    }
+    &_title{
+        top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% , -50%);
     }
     &_titleWrapper h1{
         font-size: 19rem;
         font-weight: 300;
         text-transform: uppercase;
         color: white;
-        text-align: left;
+        text-align: center;
         @include mobile(){
             font-size: 10rem;
         }
@@ -677,6 +714,10 @@ position: static;
     &_imgWrapper img{
         clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
         width:500px;
+        @include tablet(){
+            font-size: 12rem;
+            width:400px;
+        }
         @include mobile(){
             font-size: 12rem;
             width:250px;
@@ -691,5 +732,51 @@ position: static;
         font-size: 2rem;
         font-weight: 100;
     }
+}
+.postInfoWrapper{
+    width: 100%;
+    grid-column: span 3;
+    margin-top: 1.5rem;
+}
+.singlePostInfo{
+    display: grid;
+    grid-template-columns: 71px 1fr;
+    grid-gap:2rem;
     
+    & p{
+        font-family: $enFont;
+        font-weight: 100;
+        font-size: 2rem;
+    }
+    
+    &_fieldName>p{
+        text-align: right;
+        
+    }
+    &_tilteRight , &_tilteLeft{
+        font-weight: 200 !important;
+    }
+}
+.singlePostLocation{
+    font-family: $enFont;
+        font-weight: 100;
+        font-size: 3rem;
+}
+.singlePostTitle{
+    font-family: $enFont;
+        font-weight: 200;
+        text-transform: uppercase;
+}
+.postTitleWrapper{
+    grid-column: span 9;
+    //margin-left:27rem;
+}
+
+.postImgCover{
+    margin-top: 12rem;
+    width: 100%;
+    grid-column: span 12;
+    @include mobile(){
+        margin-top: 6rem;
+    }
 }

@@ -453,7 +453,7 @@ h1, .h1 {
 
 @media only screen and (max-width: 600px) {
   h1, .h1 {
-    font-weight: 400;
+    font-weight: 100;
     font-size: 6.5rem;
     color: black;
   }
@@ -467,7 +467,7 @@ h2, .h2 {
 
 @media only screen and (max-width: 600px) {
   h2, .h2 {
-    font-weight: 300;
+    font-weight: 100;
     font-size: 5rem;
     color: black;
   }
@@ -481,7 +481,7 @@ h3, .h3 {
 
 @media only screen and (max-width: 600px) {
   h3, .h3 {
-    font-weight: 400;
+    font-weight: 200;
     font-size: 4.5rem;
     color: black;
   }
@@ -495,7 +495,7 @@ h4, .h4 {
 
 @media only screen and (max-width: 600px) {
   h4, .h4 {
-    font-weight: 400;
+    font-weight: 200;
     font-size: 3.5rem;
     color: black;
   }
@@ -1305,6 +1305,7 @@ a:hover {
 }
 
 .sloganImgWrapper {
+  left: 100vw;
   width: 4000px;
   height: 600px;
   overflow-x: visible;
@@ -1327,6 +1328,7 @@ a:hover {
 .sloganWrapper span {
   position: absolute;
   top: 50%;
+  left: 100vw;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-family: "Lab Grotesque";
@@ -1337,6 +1339,37 @@ a:hover {
 
 .turnBlack {
   position: static;
+}
+
+.fProject {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 400px);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.5))), url(../asset/img/10.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../asset/img/10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fProject_info {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.fProject h2, .fProject h4, .fProject h6 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fProject button {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /****archive*****/
@@ -1587,6 +1620,13 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .wwaWrapper {
+    margin-top: 6rem;
+    height: unset;
+  }
+}
+
 .wwaWrapperColumn {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -1618,8 +1658,8 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .wwaWrapperPragEn {
-    font-size: 2rem;
-    line-height: 5rem;
+    font-size: 2.5rem;
+    line-height: 5.5rem;
   }
 }
 
@@ -1632,12 +1672,15 @@ a:hover {
   direction: rtl;
   color: white;
   top: 0;
+  text-align: left;
+  margin-top: 4rem;
 }
 
 @media only screen and (max-width: 600px) {
   .wwaWrapperPragFa {
+    margin-top: 2.75rem;
     font-size: 2rem;
-    line-height: 5rem;
+    line-height: 5.5rem;
   }
 }
 
@@ -1663,9 +1706,16 @@ a:hover {
 }
 
 .wg_titleWrapper {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  width: 100vw;
+  position: relative;
+}
+
+.wg_title {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .wg_titleWrapper h1 {
@@ -1673,7 +1723,7 @@ a:hover {
   font-weight: 300;
   text-transform: uppercase;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1686,6 +1736,13 @@ a:hover {
   -webkit-clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
   width: 500px;
+}
+
+@media only screen and (max-width: 900px) {
+  .wg_imgWrapper img {
+    font-size: 12rem;
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1703,5 +1760,61 @@ a:hover {
 .wg_infoPrag {
   font-size: 2rem;
   font-weight: 100;
+}
+
+.postInfoWrapper {
+  width: 100%;
+  grid-column: span 3;
+  margin-top: 1.5rem;
+}
+
+.singlePostInfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 71px 1fr;
+      grid-template-columns: 71px 1fr;
+  grid-gap: 2rem;
+}
+
+.singlePostInfo p {
+  font-family: "Lab Grotesque";
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.singlePostInfo_fieldName > p {
+  text-align: right;
+}
+
+.singlePostInfo_tilteRight, .singlePostInfo_tilteLeft {
+  font-weight: 200 !important;
+}
+
+.singlePostLocation {
+  font-family: "Lab Grotesque";
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.singlePostTitle {
+  font-family: "Lab Grotesque";
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.postTitleWrapper {
+  grid-column: span 9;
+}
+
+.postImgCover {
+  margin-top: 12rem;
+  width: 100%;
+  grid-column: span 12;
+}
+
+@media only screen and (max-width: 600px) {
+  .postImgCover {
+    margin-top: 6rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
