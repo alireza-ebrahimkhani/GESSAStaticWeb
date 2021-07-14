@@ -70,7 +70,6 @@ console.log(window.innerWidth + document.querySelector(".sloganWrapper span").cl
       }
   }); 
   
-  console.log(window.innerWidth + document.querySelector(".sloganImgWrapper").clientWidth)
   gsap.to(".sloganImgWrapper", {
       duration:1, 
       x:() => `+=${-1*(window.innerWidth + document.querySelector(".sloganImgWrapper").clientWidth)}`,

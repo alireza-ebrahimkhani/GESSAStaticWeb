@@ -1608,7 +1608,6 @@ a:hover {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  height: calc(100vh - 432px);
 }
 
 @media only screen and (max-width: 900px) {
@@ -1616,7 +1615,6 @@ a:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1/7;
-    height: calc(100vh - 12rem);
   }
 }
 
@@ -1816,5 +1814,140 @@ a:hover {
   .postImgCover {
     margin-top: 6rem;
   }
+}
+
+/****** whyGessa ******/
+.whyGessa {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  padding: 0 6rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .whyGessa {
+    display: none;
+  }
+}
+
+.whyGessa_titleColumn {
+  height: 100%;
+}
+
+.whyGessa_titleWrapper {
+  height: 100vh;
+  position: relative;
+}
+
+.whyGessa_titleWrapper span {
+  font-size: 96px;
+  font-family: "Lab Grotesque";
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.whyGessa_img {
+  -webkit-clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+  width: 100%;
+}
+
+.whyGessa_item {
+  opacity: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.whyGessa_info h5, .whyGessa p {
+  font-family: "Vazir";
+  color: white;
+  direction: rtl;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.whyGessa_info p {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.whyGessa_itemWrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/****** whyMGessa ******/
+.whyGessaM {
+  padding: 0rem 3rem;
+  margin-bottom: 10rem;
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .whyGessaM {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+.whyGessaM_titleColumn {
+  position: relative;
+  z-index: 30;
+  height: 100vh;
+}
+
+.whyGessaM_titleWrapper {
+  position: absolute;
+  top: 50%;
+  width: 620px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100vw;
+}
+
+.whyGessaM_titleWrapper span {
+  font-size: 96px;
+  font-family: "Lab Grotesque";
+  text-transform: uppercase;
+  color: white;
+}
+
+.whyGessaM_item {
+  opacity: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.whyGessaM_itemWrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.whyGessaM_img {
+  -webkit-clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+  width: 100%;
+}
+
+.whyGessaM_info h5, .whyGessaM p {
+  font-family: "Vazir";
+  color: white;
+  direction: rtl;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.whyGessaM_info p {
+  font-size: 2rem;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */

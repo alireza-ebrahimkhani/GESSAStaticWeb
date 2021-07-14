@@ -627,10 +627,8 @@ position: static;
 .wwaWrapper{
     display: grid;
     grid-template-columns: 1fr;
-    height: calc(100vh - 432px);
     @include tablet(){
         grid-column: 1/7;
-        height: calc(100vh - 12rem);
     }
     @include mobile(){
         margin-top: 6rem;
@@ -675,7 +673,6 @@ position: static;
             font-size: 2rem;
             line-height: 5.5rem;
         }
-
     }
 }
 .wg{
@@ -779,4 +776,115 @@ position: static;
     @include mobile(){
         margin-top: 6rem;
     }
+}
+
+/****** whyGessa ******/
+.whyGessa{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 6rem;
+    @include tablet(){
+        display: none;
+    }
+    &_titleColumn{
+        height: 100%;
+    }
+    &_titleWrapper{
+        height: 100vh;
+        position: relative;
+        & span{
+            
+        font-size: 96px;
+        font-family: $enFont;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    }
+    &_infoColumn{
+    }
+    &_img{
+        clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+        width: 100%;
+    }
+    
+    &_item{
+
+        opacity: 0;
+        height: 100vh;
+        position: relative;
+    }
+    &_info h5, p{
+        font-family: $faFont;
+        color: white;
+        direction: rtl;
+        text-align: right;
+        margin-top: 1rem;
+    }
+    &_info p{
+        font-size: 1.75rem;
+        font-weight: 100;
+    }
+    &_itemWrapper{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+/****** whyMGessa ******/
+.whyGessaM{
+    padding: 0rem 3rem;
+    margin-bottom: 10rem;
+    display: none;
+    @include tablet(){
+        display: grid;
+    }
+    &_titleColumn{
+        position: relative;
+        z-index: 30;
+        height: 100vh;
+    }
+    &_infoColumn{
+    }
+    &_titleWrapper{
+        position: absolute;
+        top: 50%;
+        width: 620px;
+        transform: translateY(-50%);
+        left: 100vw;
+        & span{
+        font-size: 96px;
+        font-family: $enFont;
+        text-transform: uppercase;
+        color: white;
+    }
+    }
+    &_item{
+        opacity: 0;
+        height: 100vh;
+        position: relative;
+    }
+    &_itemWrapper{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &_img{
+        clip-path: polygon(0 0, 100% 18%, 100% 100%, 0% 100%);
+        width: 100%;
+    }
+    &_info h5, p{
+        font-family: $faFont;
+        color: white;
+        direction: rtl;
+        text-align: right;
+        margin-top: 1rem;
+    }
+    &_info p{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    
 }
